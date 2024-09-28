@@ -1,5 +1,6 @@
 @import url(./reset.css);
 @import url(./variables.css);
+@import url(./utils.css);
 
 html {
   box-sizing: border-box;
@@ -26,7 +27,7 @@ body {
 }
 
 .header {
-  padding: 32px 20px;
+  padding: 32px var(--padding-sm) 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -47,10 +48,48 @@ body {
   color: var(--color-green);
 }
 
+.hero {
+  padding: 56px var(--padding-sm) 144px;
+}
+
+.hero__title {
+  font-family: var(--font-family-primary);
+  font-size: 3rem;
+  color: var(--color-white);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.button {
+  background-color: var(--color-green);
+  color: var(--color-purple-900);
+  font-weight: bold;
+  line-height: 1.8;
+  text-decoration: none;
+  padding: 12px 32px;
+  display: block;
+  max-width: fit-content;
+  margin: auto;
+}
+
+@media (max-width: 330px) {
+  .hero__title {
+    font-size: 2.5rem;
+  }
+}
+
 @media (min-width: 768px) {
   .header {
     padding-left: 44px;
     padding-right: 44px;
+  }
+
+  .hero__title {
+    font-size: 3.75rem;
+  }
+
+  .button {
+    font-size: 1.125rem;
   }
 }
 
@@ -59,5 +98,11 @@ body {
     box-sizing: content-box;
     max-width: 1120px;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero__title {
+    font-size: 5rem;
   }
 }
