@@ -12,5 +12,52 @@ html {
 }
 
 body {
-  background-color: var(--color-primary);
+  background-color: var(--color-purple-100);
+  font-family: var(--font-family-secondary);
+  font-size: 1rem;
+}
+
+.background {
+  background-color: var(--color-purple-900);
+  width: 100vw;
+  height: 457px;
+  position: absolute;
+  z-index: -1;
+}
+
+.header {
+  padding: 32px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header a {
+  color: var(--color-white);
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  text-decoration: none;
+  border-bottom: solid 3px var(--color-green);
+  height: 2.188rem;
+}
+
+.header a:hover {
+  color: var(--color-green);
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding-left: 44px;
+    padding-right: 44px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    box-sizing: content-box;
+    max-width: 1120px;
+    margin: 0 auto;
+  }
 }

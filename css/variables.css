@@ -1,3 +1,20 @@
+@font-face {
+  font-family: Fraunces;
+  src: url(../assets/fonts/fraunces/Fraunces-VariableFont_SOFT\WONK\opsz\wght.ttf);
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url(../assets/fonts/manrope/Manrope-VariableFont_wght.ttf);
+}
+
 :root {
-  --color-primary: red;
+  --color-green: #44ffa1;
+  --color-purple-900: #24053e;
+  --color-purple-500: #584d62;
+  --color-purple-100: #fcf8ff;
+  --color-white: #fff;
+
+  --font-family-primary: Fraunces, serif;
+  --font-family-secondary: Manrope, sans-serif;
 }
