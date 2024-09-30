@@ -18,12 +18,30 @@ body {
   font-size: 1rem;
 }
 
+img {
+  max-width: 100%;
+}
+
 .background {
   background-color: var(--color-purple-900);
   width: 100vw;
-  height: 457px;
+  height: 481px;
   position: absolute;
   z-index: -1;
+}
+
+.background-curve {
+  width: 100vw;
+  position: relative;
+  z-index: inherit;
+  top: calc(481px + 2px);
+  display: block;
+}
+
+.background-curve img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 .header {
@@ -49,7 +67,7 @@ body {
 }
 
 .hero {
-  padding: 56px var(--padding-sm) 144px;
+  padding: 56px var(--padding-sm) 64px;
 }
 
 .hero__title {
@@ -72,6 +90,11 @@ body {
   margin: auto;
 }
 
+.illustration {
+  display: block;
+  padding: 0 28px;
+}
+
 @media (max-width: 330px) {
   .hero__title {
     font-size: 2.5rem;
@@ -79,9 +102,24 @@ body {
 }
 
 @media (min-width: 768px) {
+  .background {
+    height: 540px;
+  }
+
+  .background-curve {
+    top: calc(540px + 2px);
+  }
+
   .header {
-    padding-left: 44px;
-    padding-right: 44px;
+    box-sizing: content-box;
+    padding-left: var(--padding-md);
+    padding-right: var(--padding-md);
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  .hero {
+    padding-bottom: 40px;
   }
 
   .hero__title {
@@ -91,18 +129,34 @@ body {
   .button {
     font-size: 1.125rem;
   }
-}
 
-@media (min-width: 768px) {
-  .header {
+  .illustration {
     box-sizing: content-box;
-    max-width: 1120px;
-    margin: 0 auto;
+    padding-left: var(--padding-md);
+    padding-right: var(--padding-md);
+    max-width: 603px;
+    margin: auto;
   }
 }
 
 @media (min-width: 1024px) {
+  .hero {
+    padding-bottom: 88px;
+  }
+
   .hero__title {
     font-size: 5rem;
+  }
+
+  .background {
+    height: 771px;
+  }
+
+  .background-curve {
+    top: calc(771px + 2px);
+  }
+
+  .illustration {
+    max-width: 767px;
   }
 }

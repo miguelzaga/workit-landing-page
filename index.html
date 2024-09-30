@@ -12,7 +12,14 @@
 </head>
 
 <body>
-  <div class="background"></div>
+  <div class="background">
+    <!-- <img class="background-curve" src="./assets/images/ornamental.svg" alt=""> -->
+    <picture class="background-curve">
+      <source srcset="./assets/images/curve-lg.svg" media="(min-width: 1024px)" />
+      <source srcset="./assets/images/curve-md.svg" media="(min-width: 768px)" />
+      <img src="./assets/images/curve-sm.svg" alt="" />
+    </picture>
+  </div>
 
   <header class="header">
     <img src="./assets/images/logo-light.svg" alt="work it logo">
@@ -26,7 +33,7 @@
         needs.</h1>
       <a class="button" href="#">Learn more</a>
     </div>
-    <div class="illustration"><img src="" alt=""></div>
+    <img class="illustration" src="./assets/images/image-hero.webp" alt="Cellphone showing a graph">
   </section>
 
   <section class="value">
