@@ -142,6 +142,10 @@ img {
   margin: auto;
 }
 
+.cta__wrapper {
+  background-color: var(--color-white);
+}
+
 .cta {
   padding-top: 112px;
   margin: 0 var(--padding-sm);
@@ -179,6 +183,26 @@ img {
 .cta__text {
   margin-bottom: 32px;
   line-height: 1.8;
+}
+
+.footer {
+  padding: 80px;
+  background-color: var(--color-white);
+}
+
+.footer__container {
+  max-width: 116px;
+  margin: auto;
+}
+
+.footer__logo {
+  display: block;
+  margin: 0 auto 56px;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 28px;
 }
 
 @media (max-width: 330px) {
@@ -312,8 +336,14 @@ img {
     font-size: 1.125rem;
   }
 
+  .footer {
+    padding: 112px;
+  }
+}
+
+@media (min-width: 1150px) {
   .cta {
-    max-width: 1120px;
+    max-width: min(93%, 1120px);
   }
 
   .cta__image {
