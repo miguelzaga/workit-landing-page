@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background-color: var(--color-purple-100);
+  background-color: var(--color-white);
   font-family: var(--font-family-secondary);
   font-size: 1rem;
 }
@@ -22,26 +22,17 @@ img {
   max-width: 100%;
 }
 
-.background {
+.top__wrapper {
   background-color: var(--color-purple-900);
-  width: 100vw;
-  height: 481px;
-  position: absolute;
-  z-index: -1;
 }
 
-.background-curve {
-  width: 100vw;
+.top__curve path {
+  fill: var(--color-purple-100);
+}
+
+.curve {
   position: relative;
-  z-index: inherit;
-  top: calc(481px + 2px);
-  display: block;
-}
-
-.background-curve img {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
+  top: 2px;
 }
 
 .header {
@@ -88,11 +79,26 @@ img {
   display: block;
   max-width: fit-content;
   margin: auto;
+  border: solid 2px var(--color-green);
+  transition: all linear 0.2s;
+}
+
+.button:hover {
+  background-color: var(--color-purple-900);
+  color: var(--color-green);
 }
 
 .illustration {
   display: block;
   padding: 0 28px;
+}
+
+.value__wrapper {
+  background-color: var(--color-purple-100);
+}
+
+.value__curve path {
+  fill: var(--color-white);
 }
 
 .value {
@@ -151,6 +157,7 @@ img {
   margin: 0 var(--padding-sm);
   position: relative;
   text-align: center;
+  z-index: 1;
 }
 
 .cta__image {
@@ -160,6 +167,7 @@ img {
   top: 112px;
   margin: auto;
   background-color: var(--color-green);
+  width: 100%;
   max-width: 280px;
   border-radius: 100%;
   z-index: -1;
@@ -203,6 +211,18 @@ img {
 .footer__socials {
   display: flex;
   gap: 28px;
+}
+
+.footer__link svg {
+  fill: var(--color-purple-500);
+}
+
+.footer__link svg path {
+  fill: inherit;
+}
+
+.footer__link svg:hover {
+  fill: var(--color-purple-900);
 }
 
 @media (max-width: 330px) {
